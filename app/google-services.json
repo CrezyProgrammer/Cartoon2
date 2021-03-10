@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "240830754665",
+    "firebase_url": "https://cartoon-videos-1c8ed-default-rtdb.firebaseio.com",
+    "project_id": "cartoon-videos-1c8ed",
+    "storage_bucket": "cartoon-videos-1c8ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240830754665:android:4972ca6622e1c7b05a57f8",
+        "android_client_info": {
+          "package_name": "com.cartoon.funnyvideos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240830754665-cdp0ehifq542ke4kepj67uda8lpgbdpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYD7rcqNDK4drgYeIlZRPOuRWMIJeifjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240830754665-cdp0ehifq542ke4kepj67uda8lpgbdpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240830754665:android:7df3e4d1a92679455a57f8",
+        "android_client_info": {
+          "package_name": "com.masum.youtubeplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240830754665-cdp0ehifq542ke4kepj67uda8lpgbdpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYD7rcqNDK4drgYeIlZRPOuRWMIJeifjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240830754665-cdp0ehifq542ke4kepj67uda8lpgbdpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

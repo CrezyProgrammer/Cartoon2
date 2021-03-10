@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/videos"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:title="Videos" />
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Exit" ></item>
+    <item android:title="Communicate">
+    <menu>
+        <item
+            android:id="@+id/policy"
+            android:icon="@drawable/ic_baseline_policy_24"
+            android:title="Policy" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="Share" />
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/ic_baseline_rate_review_24"
+            android:title="Rate Us" />
+        <item
+            android:id="@+id/more"
+            android:icon="@drawable/ic_baseline_more_24"
+            android:title="More Apps" />
+    </menu>
+    </item>
+    <group ></group>
+</menu>

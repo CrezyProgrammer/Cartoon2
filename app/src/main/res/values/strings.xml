@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cartoon Videos</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="developer_name">develoepr name</string>
+    <string name="bannar">YOUR_PLACEMENT_ID</string>
+    <string name="device_id">34da36bb-198d-4288-95e9-0050d624e025</string>
+    <string name="sponsored">Sponsored</string>
+    <string name="native_ad">YOUR_PLACEMENT_ID</string>
+    <string name="interstital">YOUR_PLACEMENT_ID</string>
+</resources>
