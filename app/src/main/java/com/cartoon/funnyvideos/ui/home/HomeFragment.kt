@@ -7,22 +7,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cartoon.funnyvideos.adapter.ItemAdapter
 import com.cartoon.funnyvideos.databinding.FragmentHomeBinding
-import com.cartoon.funnyvideos.model.Item
+import com.cartoon.funnyvideos.entity.Video
+import com.cartoon.funnyvideos.repo.DataRepository
+import com.cartoon.funnyvideos.viewModel.MainViewModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import org.imaginativeworld.oopsnointernet.callbacks.ConnectionCallback
 import org.imaginativeworld.oopsnointernet.dialogs.signal.NoInternetDialogSignal
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
-    var item: ArrayList<Item>? = null
-
+    var item: ArrayList<Video>? = null
+    @Inject
+    lateinit var myRepository: DataRepository
     private lateinit var binding: FragmentHomeBinding
+    private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,39 +43,16 @@ class HomeFragment : Fragment() {
         val root = binding.root
         item = ArrayList()
 
+        binding.recyclerview.layoutManager = LinearLayoutManager(activity)
+        binding.recyclerview.adapter = ItemAdapter(item!!)
 
 
 
-        activity?.let {
-            NoInternetDialogSignal.Builder(
-                it,
-                lifecycle
-            ).apply {
-                dialogProperties.apply {
-                    connectionCallback = object : ConnectionCallback { // Optional
-                        override fun hasActiveConnection(hasActiveConnection: Boolean) {
-                            if (hasActiveConnection)
-                            {showRecycler() }
-                            // ...
-                        }
-                    }
-
-                    cancelable = true// Optional
-                    noInternetConnectionTitle = "No Internet" // Optional
-                    noInternetConnectionMessage =
-                        "Check your Internet connection and try again." // Optional
-                    showInternetOnButtons = true // Optional
-                    pleaseTurnOnText = "Please turn on" // Optional
-                    wifiOnButtonText = "Wifi" // Optional
-                    mobileDataOnButtonText = "Mobile data" // Optional
-
-                    onAirplaneModeTitle = "No Internet" // Optional
-                    onAirplaneModeMessage = "You have turned on the airplane mode." // Optional
-                    pleaseTurnOffText = "Please turn off" // Optional
-                    airplaneModeOffButtonText = "Airplane mode" // Optional
-                    showAirplaneModeOffButtons = true // Optional
-                }
-            }.build()
+        activity?.let { it ->
+            mainViewModel.pigeonListLiveData.observe(it,{
+                binding.recyclerview.adapter = ItemAdapter(it as ArrayList<Video>)
+                showRecycler()
+            })
         }
 
 
@@ -81,7 +67,7 @@ class HomeFragment : Fragment() {
 
     private fun showRecycler() {
         Handler(Looper.getMainLooper()).post {
-            binding.progressBar.visibility = View.VISIBLE
+
         }
 
 
@@ -98,17 +84,19 @@ class HomeFragment : Fragment() {
                     item?.clear()
                     for (v in p0.children) {
 
-                        val bal = Item(
-                            v.child("title").value.toString(),
-                            v.child("id").value.toString()
+                        val bal = Video(id = v.child("id").value.toString(),
+                            title = v.child("title").value.toString(),
+                            duration = v.child("duration").value.toString(),
+                         isPopular =  false
                         )
                         item?.add(bal)
-
+                        lifecycleScope.launch {
+                            myRepository.insert(bal)
+                        }
 
                     }
                     binding.progressBar.visibility = View.GONE
 
-                    binding.recyclerview.layoutManager = LinearLayoutManager(activity)
                     binding.recyclerview.adapter = ItemAdapter(item!!)
 
                 }

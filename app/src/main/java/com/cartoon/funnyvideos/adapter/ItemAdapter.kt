@@ -9,9 +9,9 @@ import com.bumptech.glide.Glide
 import com.cartoon.funnyvideos.PlayActivity
 import com.cartoon.funnyvideos.R
 import com.cartoon.funnyvideos.databinding.LayoutBinding
-import com.cartoon.funnyvideos.model.Item
+import com.cartoon.funnyvideos.entity.Video
 
-class ItemAdapter(val items: ArrayList<Item>) : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
+class ItemAdapter(val items: ArrayList<Video>) : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
@@ -23,10 +23,11 @@ class ItemAdapter(val items: ArrayList<Item>) : RecyclerView.Adapter<ItemAdapter
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item=items[position]
         val binding=LayoutBinding.bind(holder.itemView)
-    Glide.with(holder.itemView.context).load("https://img.youtube.com/vi/${item.url}/default.jpg").into(binding.imageView)
-        binding.textView.text=item.name
+    Glide.with(holder.itemView.context).load("https://img.youtube.com/vi/${item.id}/mqdefault.jpg").into(binding.imageView)
+        binding.textView.text=item.title
+        binding.duration.text=item.duration
         binding.linearLayout.setOnClickListener {
-                    it.context.startActivity(Intent(it.context, PlayActivity::class.java).putExtra("title",item.name).putExtra("id",item.url))
+                    it.context.startActivity(Intent(it.context, PlayActivity::class.java).putExtra("title",item.title).putExtra("id",item.id))
 
         }
     }

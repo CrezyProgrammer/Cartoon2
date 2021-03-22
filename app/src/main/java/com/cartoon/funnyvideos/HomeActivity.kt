@@ -17,8 +17,9 @@ import com.facebook.ads.AdView
 import com.facebook.ads.AudienceNetworkAds
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
 private  lateinit var   appBarConfiguration:AppBarConfiguration
