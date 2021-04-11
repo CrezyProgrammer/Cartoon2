@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.cartoon.funnyvideos"
+        applicationId "com.app.cartoonvideos"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -48,8 +48,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
     testImplementation 'junit:junit:4.13.2'
@@ -69,9 +69,9 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
-    def lifecycle_version = "2.3.0"
+    def lifecycle_version = "2.3.1"
     // Activity Ktx for by viewModels()
-    implementation "androidx.activity:activity-ktx:1.2.0"
+    implementation "androidx.activity:activity-ktx:1.2.2"
 
     //ViewModel & LiveData
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
@@ -89,6 +89,11 @@ dependencies {
     kapt "androidx.hilt:hilt-compiler:$hilt_jetpack"
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.Yalantis:ColorMatchTabsAndroid:v0.0.1'
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+
+
+    implementation 'com.gitlab.developerdeveloperdeveloper:androidutilslibrary:1.0.0'
 
 
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cartoon Videos</string>
+    <string name="app_name">Cartoon Zone</string>
     <string name="title_activity_home">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="developer_name">develoepr name</string>
@@ -8,4 +8,5 @@
     <string name="sponsored">Sponsored</string>
     <string name="native_ad">YOUR_PLACEMENT_ID</string>
     <string name="interstital">YOUR_PLACEMENT_ID</string>
+    <string name="native_placement_id">2143555465960810_2145707915745565</string>
 </resources>
