@@ -1,11 +1,11 @@
-package com.app.cartoonvideos.dao
+package com.cartoon.cartoonvideos.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.app.cartoonvideos.entity.Video
+import com.cartoon.cartoonvideos.entity.Video
 
 @Dao
 interface VideoDao {

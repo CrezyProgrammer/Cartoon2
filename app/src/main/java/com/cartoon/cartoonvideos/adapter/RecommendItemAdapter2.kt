@@ -1,4 +1,4 @@
-package com.app.cartoonvideos.adapter
+package com.cartoon.cartoonvideos.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -8,15 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.app.cartoonvideos.PlayActivity
-import com.app.cartoonvideos.R
-import com.app.cartoonvideos.databinding.LayoutBinding
-import com.app.cartoonvideos.entity.Video
+import com.cartoon.cartoonvideos.PlayActivity
+import com.cartoon.cartoonvideos.R
+import com.cartoon.cartoonvideos.databinding.LayoutBinding
+import com.cartoon.cartoonvideos.entity.Video
 import com.facebook.ads.*
 import kotlinx.android.synthetic.main.list_layout.view.*
 import kotlinx.android.synthetic.main.native_ad_layout.view.*
 
-class FacebookAdsRecyclerviewAdapter(
+class FacebookAdsRecyclerviewAdapter2(
     private val activity: Activity,
     private val list: ArrayList<Video>,
     private val mNativeAdsManager: NativeAdsManager
@@ -60,6 +60,7 @@ class FacebookAdsRecyclerviewAdapter(
             val index = position - position / AD_DISPLAY_FREQUENCY
            if (index<list.size){
                val item = list[index]
+
                holder as ItemViewHolder
                item.let { holder.bind(item) }
            }

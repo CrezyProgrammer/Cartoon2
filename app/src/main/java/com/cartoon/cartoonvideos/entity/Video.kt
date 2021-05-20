@@ -1,4 +1,4 @@
-package com.app.cartoonvideos.entity
+package com.cartoon.cartoonvideos.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

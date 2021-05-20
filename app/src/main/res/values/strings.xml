@@ -9,4 +9,6 @@
     <string name="native_ad">YOUR_PLACEMENT_ID</string>
     <string name="interstital">YOUR_PLACEMENT_ID</string>
     <string name="native_placement_id">2143555465960810_2145707915745565</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

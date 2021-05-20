@@ -1,7 +1,7 @@
-package com.app.cartoonvideos.repo
+package com.cartoon.cartoonvideos.repo
 
-import com.app.cartoonvideos.AppDB
-import com.app.cartoonvideos.entity.Video
+import com.cartoon.cartoonvideos.AppDB
+import com.cartoon.cartoonvideos.entity.Video
 import java.util.concurrent.Executors
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package com.app.cartoonvideos
+package com.cartoon.cartoonvideos
 
 import org.junit.Test
 
