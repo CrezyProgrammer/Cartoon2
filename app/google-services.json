@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207479540670",
+    "project_id": "cartoon-video-7149d",
+    "storage_bucket": "cartoon-video-7149d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207479540670:android:929f3f2f404b6d78ad07ef",
+        "android_client_info": {
+          "package_name": "com.cartoon.cartoonvideos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207479540670-348h7hgtlrhs59pd3n5p83odnem0dlfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc5lFr17M9-TlZNTWkmJSGaZ27JcEs71U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207479540670-348h7hgtlrhs59pd3n5p83odnem0dlfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
